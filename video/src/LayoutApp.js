@@ -9,6 +9,7 @@ import SuggetionsList from './video/containers/SuggetionsList'
 import Api from './utils/api';
 import * as actions from './redux/actions';
 import Movie from './screens/containers/Movie';
+import Search from './sections/components/Search';
 
 const LayoutApp = ({dispatch, movie}) => {
 
@@ -29,6 +30,7 @@ const LayoutApp = ({dispatch, movie}) => {
              </>
             :<>
                <Header />
+                <Search />
                 <CategoryList />
                 <SuggetionsList />
              </>

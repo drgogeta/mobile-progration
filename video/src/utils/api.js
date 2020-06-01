@@ -16,6 +16,14 @@ class Api {
     return data.movies
   }
 
+  async searchMovie(title) {
+    const url = `${BASE_API}/list_movies`
+    const query = await fetch(url);
+    const { data } = await query.json();
+    const suggestions = data.movies.find(movie => movie.title.toLowerCase().includes(title)) 
+    return suggestions
+  }
+
 }
 
 export default new Api();
